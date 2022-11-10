@@ -313,6 +313,23 @@ class GtpConnection:
         # remove this respond and implement this method
         self.respond('Implement This for Assignment 2')
 
+    def policy_type_cmd(self,args):
+        if args[0] == "random":
+            pass
+        elif args[0] == "pattern":
+            pass
+        self.respond('')
+
+    def selection_type_cmd(self,args):
+        if args[0] == "ucb":
+            pass
+        elif args[0] == "rr":
+            pass
+        self.respond('')
+
+    def policy_moves_cmd(self,args):
+        pass
+
 def point_to_coord(point, boardsize):
     """
     Transform point given as board array index 

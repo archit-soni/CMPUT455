@@ -1,0 +1,764 @@
+<html>
+<head>
+<title>Output: assignment3-public-tests.gtp</title>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<meta name="generator" content="gogui-regress 1.5.1 (http://gogui.sf.net)">
+<style type="text/css">
+<!--
+body { margin:0; }
+span.comment { color:#999999; }
+span.fail { font-weight:bold; color:#ff5454; }
+span.error { font-weight:bold; color:#ffa954; }
+span.stderr { color:#666666; }
+span.invalid { background:#ff5454;}
+span.pass { font-weight:bold; color:#5eaf5e; }
+span.test { font-weight:bold; }
+-->
+</style>
+</head>
+<body bgcolor="white" text="black" link="#0000ee" vlink="#551a8b">
+<table border="0" width="100%" bgcolor="#91aee8" border="0">
+<tr><td>
+<h1>Output: assignment3-public-tests.gtp</h1>
+</td></tr>
+</table>
+<table width="100%" bgcolor="#e0e0e0">
+<tr><th align="left">Date:</th><td>November 9, 2022 6:06:15 PM MST</td></tr>
+<tr><th align="left">Host:</th><td>LAPTOP-8C56J47P</td></tr>
+<tr><th align="left" valign="top">Command:</th>
+<td valign="top"><tt>python NoGo.py</tt></td></tr>
+</table>
+<pre style="margin:1em">
+name
+= Go0
+
+version
+= 1.0
+
+cputime
+? Unknown command
+
+</pre>
+<hr style="margin:1em" size="1">
+<pre style="margin:1em">
+<span class="comment"># Public tests
+</span>
+<span class="command">clear_board
+</span>= 
+
+<span class="command">boardsize 7
+</span>= 
+
+<span class="command">play b c6
+</span>= 
+
+<span class="command">play w d5
+</span>= 
+
+<span class="command">play b a7
+</span>= 
+
+<span class="command">play w g7
+</span>= 
+
+<span class="command">play b a2
+</span>= 
+
+<span class="command">play w e4
+</span>= 
+
+<span class="command">play b a3
+</span>= 
+
+<span class="command">play w f1
+</span>= 
+
+<span class="command">play b c3
+</span>= 
+
+<span class="command">play w d7
+</span>= 
+
+<span class="command">play b d3
+</span>= 
+
+<span class="command">play w g4
+</span>= 
+
+<span class="command">play b c4
+</span>= 
+
+<span class="command">play w b7
+</span>= 
+
+<span class="command">play b c2
+</span>= 
+
+<span class="command">play w f2
+</span>= 
+
+<span class="command">play b g5
+</span>= 
+
+<span class="command">play w b6
+</span>= 
+
+<span class="command">play b e2
+</span>= 
+
+<span class="command">play w b4
+</span>= 
+
+<span class="command">play b b2
+</span>= 
+
+<span class="command">play w a5
+</span>= 
+
+<span class="command">play b b5
+</span>= 
+
+<span class="command">play w g3
+</span>= 
+
+<span class="command">play b g1
+</span>= 
+
+<span class="command">play w e7
+</span>= 
+
+<span class="command">play b a4
+</span>= 
+
+<span class="command">play w d4
+</span>= 
+
+<span class="command">play b b1
+</span>= 
+
+<span class="command">play w f4
+</span>= 
+
+<span class="command">play b a1
+</span>= 
+
+<span class="command">play w e3
+</span>= 
+
+<span class="command">play b c1
+</span>= 
+
+<span class="command">play w e6
+</span>= 
+
+<span class="command">play b f6
+</span>= 
+
+<span class="command">play w e1
+</span>= 
+
+<span class="command">play b e5
+</span>= 
+
+<span class="command">play w g6
+</span>= 
+
+<span class="command">play b c7
+</span>= 
+
+<span class="comment">#   A B C D E F G
+# 7 X O X O O . O 7
+# 6 . O X . O X O 6
+# 5 O X . O X . X 5
+# 4 X O X O O O O 4
+# 3 X . X X O . O 3
+# 2 X X X . X O . 2
+# 1 X X X . O O X 1
+#   A B C D E F G
+# White to play
+</span>
+<span class="command">policy random
+</span><span class="error">? Unknown command
+
+</span><span class="test"><a name="10">10 policy_moves
+</a>#? [d1 d6 f3 f7 0.25 0.25 0.25 0.25]
+</span><span class="fail">? Unknown command
+
+</span>
+<span class="command">policy pattern
+</span><span class="error">? Unknown command
+
+</span><span class="test"><a name="20">20 policy_moves
+</a>#? [d1 d6 f3 f7 0.417 0.102 0.218 0.264]
+</span><span class="fail">? Unknown command
+
+</span>
+<span class="comment"># Test to see genmove works with rr selection
+</span><span class="command">play w f3
+</span>= 
+
+<span class="command">play b c5
+</span>= 
+
+<span class="command">play w d1
+</span>= 
+
+<span class="command">play b d2
+</span>= 
+
+<span class="comment">#   A B C D E F G
+# 7 X O X O O . O 7
+# 6 . O X . O X O 6
+# 5 O X X O X . X 5
+# 4 X O X O O O O 4
+# 3 X . X X O O O 3
+# 2 X X X X X O . 2
+# 1 X X X O O O X 1
+#   A B C D E F G
+# White to play
+</span>
+<span class="command">policy random
+</span><span class="error">? Unknown command
+
+</span><span class="test"><a name="30">30 genmove w
+</a>#? [f7]
+</span><span class="fail">= D6
+
+</span>
+<span class="command">clear_board
+</span>= 
+
+<span class="command">play b e6
+</span>= 
+
+<span class="command">play w a5
+</span>= 
+
+<span class="command">play b d7
+</span>= 
+
+<span class="command">play w g5
+</span>= 
+
+<span class="command">play b f3
+</span>= 
+
+<span class="command">play w b1
+</span>= 
+
+<span class="command">play b b5
+</span>= 
+
+<span class="command">play w e7
+</span>= 
+
+<span class="command">play b g6
+</span>= 
+
+<span class="command">play w a6
+</span>= 
+
+<span class="command">play b a3
+</span>= 
+
+<span class="command">play w b2
+</span>= 
+
+<span class="command">play b f4
+</span>= 
+
+<span class="command">play w a2
+</span>= 
+
+<span class="command">play b g2
+</span>= 
+
+<span class="command">play w c5
+</span>= 
+
+<span class="command">play b d5
+</span>= 
+
+<span class="command">play w c6
+</span>= 
+
+<span class="command">play b b7
+</span>= 
+
+<span class="command">play w f2
+</span>= 
+
+<span class="command">play b d6
+</span>= 
+
+<span class="command">play w g1
+</span>= 
+
+<span class="command">play b d2
+</span>= 
+
+<span class="command">play w f1
+</span>= 
+
+<span class="command">play b a4
+</span>= 
+
+<span class="command">play w d4
+</span>= 
+
+<span class="command">play b b4
+</span>= 
+
+<span class="command">play w e5
+</span>= 
+
+<span class="command">play b a7
+</span>= 
+
+<span class="command">play w e1
+</span>= 
+
+<span class="command">play b c1
+</span>= 
+
+<span class="command">play w c2
+</span>= 
+
+<span class="command">play b f6
+</span>= 
+
+<span class="command">play w a1
+</span>= 
+
+<span class="command">play b g4
+</span>= 
+
+<span class="command">play w b6
+</span>= 
+
+<span class="command">play b c3
+</span>= 
+
+<span class="command">play w f5
+</span>= 
+
+<span class="command">play b d3
+</span>= 
+
+<span class="command">play w e4
+</span>= 
+
+<span class="comment">#   A B C D E F G
+# 7 X X . X O . . 7
+# 6 O O O X X X X 6
+# 5 O X O X O O O 5
+# 4 X X . O O X X 4
+# 3 X . X X . X . 3
+# 2 O O O X . O X 2
+# 1 O O X . O O O 1
+#   A B C D E F G
+#Black to play
+</span>
+
+<span class="command">policy random
+</span><span class="error">? Unknown command
+
+</span><span class="test"><a name="40">40 policy_moves
+</a>#? [c4 c7 d1 e2 e3 g3 g7 0.143 0.143 0.143 0.143 0.143 0.143 0.143]
+</span><span class="fail">? Unknown command
+
+</span>
+<span class="command">policy pattern
+</span><span class="error">? Unknown command
+
+</span><span class="test"><a name="50">50 policy_moves
+</a>#? [c4 c7 d1 e2 e3 g3 g7 0.079 0.155 0.047 0.341 0.158 0.092 0.128]
+</span><span class="fail">? Unknown command
+
+</span>
+<span class="command">play b g7
+</span>= 
+
+<span class="command">selection ucb
+</span><span class="error">? Unknown command
+
+</span><span class="test"><a name="60">60 genmove w
+</a>#? [e2|e3|c4]
+</span><span class="fail">= C4
+
+</span>
+
+<span class="command">clear_board
+</span>= 
+
+<span class="command">play b b1
+</span>= 
+
+<span class="command">play w c1
+</span>= 
+
+<span class="command">play b g7
+</span>= 
+
+<span class="command">play w e7
+</span>= 
+
+<span class="command">play b a5
+</span>= 
+
+<span class="command">play w e6
+</span>= 
+
+<span class="command">play b a6
+</span>= 
+
+<span class="command">play w e4
+</span>= 
+
+<span class="command">play b b6
+</span>= 
+
+<span class="command">play w c3
+</span>= 
+
+<span class="command">play b f1
+</span>= 
+
+<span class="command">play w c2
+</span>= 
+
+<span class="command">play b a1
+</span>= 
+
+<span class="command">play w g3
+</span>= 
+
+<span class="command">play b g6
+</span>= 
+
+<span class="command">play w c4
+</span>= 
+
+<span class="command">play b e2
+</span>= 
+
+<span class="command">play w f2
+</span>= 
+
+<span class="command">play b a2
+</span>= 
+
+<span class="command">play w f7
+</span>= 
+
+<span class="command">play b g2
+</span>= 
+
+<span class="command">play w f6
+</span>= 
+
+<span class="command">play b b5
+</span>= 
+
+<span class="command">play w c7
+</span>= 
+
+<span class="command">play b b7
+</span>= 
+
+<span class="command">play w c6
+</span>= 
+
+<span class="command">play b e5
+</span>= 
+
+<span class="command">play w d7
+</span>= 
+
+<span class="command">play b e1
+</span>= 
+
+<span class="command">play w b4
+</span>= 
+
+<span class="command">play b c5
+</span>= 
+
+<span class="command">play w g4
+</span>= 
+
+<span class="command">play b d3
+</span>= 
+
+<span class="command">play w a3
+</span>= 
+
+<span class="command">play b d4
+</span>= 
+
+<span class="command">play w f4
+</span>= 
+
+<span class="command">play b b3
+</span>= 
+
+<span class="command">play w d6
+</span>= 
+
+<span class="command">play b g1
+</span>= 
+
+<span class="command">play w d1
+</span>= 
+
+<span class="command">play b g5
+</span>= 
+
+
+<span class="comment">#   A B C D E F G
+# 7 . X O O O O X 7
+# 6 X X O O O O X 6
+# 5 X X X . X . X 5
+# 4 . O O X O O O 4
+# 3 O X O X . . O 3
+# 2 X . O . X O X 2
+# 1 X X O O X X X 1
+#   A B C D E F G
+#Black to play
+</span>
+
+<span class="command">policy random
+</span><span class="error">? Unknown command
+
+</span><span class="test"><a name="70">70 policy_moves
+</a>#? [a4 d2 d5 e3 f3 0.2 0.2 0.2 0.2 0.2]
+</span><span class="fail">? Unknown command
+
+</span>
+<span class="command">policy pattern
+</span><span class="error">? Unknown command
+
+</span><span class="test"><a name="80">80 policy_moves
+</a>#? [a4 d2 d5 e3 f3 0.142 0.176 0.151 0.233 0.298]
+</span><span class="fail">? Unknown command
+
+</span>
+<span class="command">clear_board
+</span>= 
+
+<span class="command">boardsize 4
+</span>= 
+
+<span class="command">selection rr
+</span><span class="error">? Unknown command
+
+</span><span class="command">policy pattern
+</span><span class="error">? Unknown command
+
+</span><span class="command">play b b4
+</span>= 
+
+<span class="command">play w c4
+</span>= 
+
+<span class="command">play b a3
+</span>= 
+
+<span class="command">play w b3
+</span>= 
+
+<span class="command">play b c2
+</span>= 
+
+<span class="command">play w d3
+</span>= 
+
+<span class="command">play b b1
+</span>= 
+
+<span class="command">play w d1
+</span>= 
+
+<span class="command">play b a4
+</span>= 
+
+<span class="command">play w b2
+</span>= 
+
+<span class="command">play b a2
+</span>= 
+
+<span class="comment">#    A B C D
+#  4 X X O . 4
+#  3 X O . O 3
+#  2 X O X . 2
+#  1 . X . O 1
+#    A B C D
+# White to play
+</span>
+<span class="comment"># rr, pattern
+</span><span class="test"><a name="90">90 genmove w
+</a>#? [c1|c3|d2]
+</span><span class="fail">= D2
+
+</span>
+<span class="command">clear_board
+</span>= 
+
+<span class="command">play b b4
+</span>= 
+
+<span class="command">play w c4
+</span>= 
+
+<span class="command">play b a3
+</span>= 
+
+<span class="command">play w b3
+</span>= 
+
+<span class="command">play b c2
+</span>= 
+
+<span class="command">play w d3
+</span>= 
+
+<span class="command">play b b1
+</span>= 
+
+<span class="command">play w d1
+</span>= 
+
+<span class="command">play b a4
+</span>= 
+
+<span class="command">play w b2
+</span>= 
+
+<span class="command">play b a2
+</span>= 
+
+<span class="comment">#    A B C D
+#  4 X X O . 4
+#  3 X O . O 3
+#  2 X O X . 2
+#  1 . X . O 1
+#    A B C D
+# White to play
+</span>
+<span class="comment"># ucb, pattern
+</span><span class="command">selection ucb
+</span><span class="error">? Unknown command
+
+</span><span class="test"><a name="100">100 genmove w
+</a>#? [c1]
+</span><span class="fail">= C3
+
+</span>
+<span class="command">clear_board
+</span>= 
+
+<span class="command">play b b4
+</span>= 
+
+<span class="command">play w c4
+</span>= 
+
+<span class="command">play b a3
+</span>= 
+
+<span class="command">play w b3
+</span>= 
+
+<span class="command">play b c2
+</span>= 
+
+<span class="command">play w d3
+</span>= 
+
+<span class="command">play b b1
+</span>= 
+
+<span class="command">play w d1
+</span>= 
+
+<span class="command">play b a2
+</span>= 
+
+<span class="comment">#    A B C D
+#  4 . X O . 4
+#  3 X O . O 3
+#  2 X . X . 2
+#  1 . X . O 1
+#    A B C D
+# White to play
+</span>
+<span class="comment"># ucb, random
+</span><span class="command">policy random
+</span><span class="error">? Unknown command
+
+</span><span class="test"><a name="110">110 genmove w
+</a>#? [b2|c1|c3|d2]
+</span><span class="fail">= B2
+
+</span>
+<span class="command">clear_board
+</span>= 
+
+<span class="command">play b b4
+</span>= 
+
+<span class="command">play w c4
+</span>= 
+
+<span class="command">play b a3
+</span>= 
+
+<span class="command">play w b3
+</span>= 
+
+<span class="command">play b c2
+</span>= 
+
+<span class="command">play w d3
+</span>= 
+
+<span class="command">play b b1
+</span>= 
+
+<span class="command">play w d1
+</span>= 
+
+<span class="command">play b a2
+</span>= 
+
+<span class="comment">#    A B C D
+#  4 . X O . 4
+#  3 X O . O 3
+#  2 X . X . 2
+#  1 . X . O 1
+#    A B C D
+# White to play
+</span>
+<span class="comment"># rr, random
+</span><span class="command">selection rr
+</span><span class="error">? Unknown command
+
+</span><span class="test"><a name="120">120 genmove w
+</a>#? [b2|c1|c3|d2]
+</span><span class="fail">= C3
+
+</span></pre>
+<hr style="margin:1em" size="1">
+<pre style="margin:1em">
+</span>cputime
+? Unknown command
+
+quit
+= 
+
+</pre>
+<hr style="margin-bottom:0" size="1">
+<p style="margin-top:1; margin-right:5" align="right"><i><small>Generated on 11/9/22 6:06 PM by gogui-regress 1.5.1 (<a href="http://gogui.sf.net">http://gogui.sf.net</a>)</small></i></p>
+</body>
+</html>
